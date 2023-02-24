@@ -1,3 +1,9 @@
+*{ 
+  -moz-box-sizing: border-box; 
+  -webkit-box-sizing: border-box; 
+   box-sizing: border-box; 
+}
+
 body{
     width: 100vw;
     margin: 0;
@@ -93,64 +99,45 @@ li{
     text-align: center;
 }
 
-
+.novedades{
+  text-align: center;
+  font-size: larger;
+}
 .parallax-container {
-  height: 25em;
-  position: relative;
+  display: -ms-flexbox; 
+  display: flex;
+  margin: auto;
+  margin-bottom: 5em;
+  -ms-flex-wrap: wrap; 
+  flex-wrap: wrap;
+  padding: 0 4px;
+  width: 70%;
+  height: 70%;
+  background: rgb(212, 220, 240);
 }
-
-.parallax-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-position: center;
-  background-size: cover;
-  z-index: 1;
-  transition: transform 0.2s ease-out;
+.column {
+  -ms-flex: 50%; 
+  flex: 50%;
+  max-width: 50%;
+  overflow: hidden;
 }
-
-.parallax-img:nth-child(1) {
-  transform: translateX(0);
-  background-image: url('../images/venom1.jpg');
-  object-fit: cover;
+.column img {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  vertical-align: middle;
+  width: 99%;
 }
-
-.parallax-img:nth-child(2) {
-  transform: translateX(-25%);
-  background-image: url('../images/venom2.jpg');
-  object-fit: cover;
+.group{
+  display: flex;
+  width: 50%;
 }
-
-.parallax-img:nth-child(3) {
-  transform: translateX(-50%);
-  background-image: url('../images/venom3.jpg');
-  object-fit:cover ;
-}
-
-.parallax-img:nth-child(4) {
-  transform: translateX(-75%);
-  background-image: url('../images/venom4.jpg');
-  object-fit: cover;
-}
-
-.parallax-img:hover  {
-    animation: test 0.3s forwards;
-}
-
-@keyframes test {
-    to {
-      transform: translateX(-100px);
-    }
-  }
 
 footer {
     position: absolute;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 100%;
+    width: 100vw;
     height: 8%;
     background-color: black;
     color: white;
