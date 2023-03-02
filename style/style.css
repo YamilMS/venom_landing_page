@@ -41,6 +41,18 @@ ul{
 li{
     margin-left: 10%;
 }
+a {
+    box-shadow: inset 0 0 0 0 #54b3d6;
+    color: black;
+    margin: 0 -.25rem;
+    padding: 0 .25rem;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
+a:hover {
+    box-shadow: inset 100px 0 0 0 #6d0e0e;
+    color: white;
+}
 
 .container{
     height: 100%;
@@ -68,8 +80,9 @@ li{
 .textHeroImage{
     position: absolute;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     height: 20em;
     width: 20em;
     top: 0;
@@ -77,6 +90,22 @@ li{
     background: white;
 }
 
+button{
+    background-color: #6d0e0e;
+    color: white;
+    margin-bottom: 1em;
+    padding: 0.8em 1em;
+    border-radius: 0.2em;
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.19);
+    width: 40%;
+    cursor: pointer;
+}
+
+button:active {
+    background-color: #4d0a0a;
+    transform: translateY(4px);
+}
 
 .sobreMi{
     display: flex;
@@ -101,7 +130,9 @@ li{
 
 .novedades{
   text-align: center;
-  font-size: larger;
+  font-size:x-large ;
+  color: #6d0e0e;
+  margin-bottom: 1em;
 }
 .parallax-container {
   display: -ms-flexbox; 
@@ -115,6 +146,10 @@ li{
   height: 70%;
   background: rgb(212, 220, 240);
 }
+img:hover {
+    -webkit-transform: rotate(360deg);transform: rotate(360deg);
+}
+
 .column {
   -ms-flex: 50%; 
   flex: 50%;
