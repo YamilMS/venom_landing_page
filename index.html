@@ -11,7 +11,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@0,500;1,300&display=swap" rel="stylesheet">
 </head>
-<body>
+<body style="width: 100%;">
 
                                     <!-- YAMIL MELIAN SANTOS -->
 
@@ -22,12 +22,14 @@
                 <img class="logo" src="./images/logo.png" alt="Logo de venom">
                 <p>VENOM</p>
             </div>
-            <ul>
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="./html/portfolio.html">PORTFOLIO</a></li>
-                <li><a href="./html/blog.html">BLOG</a></li>
-                <li><a href="./html/contacto.html">CONTACTO</a></li>
-            </ul>
+            <div>
+                <ul class="hidden">
+                    <li><a class="spanActive" href="index.html">HOME</a></li>
+                    <li><a href="./html/portfolio.html">PORTFOLIO</a></li>
+                    <li><a href="./html/blog.html">BLOG</a></li>
+                    <li><a href="./html/contacto.html">CONTACTO</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
     <!-- CONTAINER CON EL CONTENIDO PRINCIPAL -->
@@ -35,41 +37,45 @@
         
     <!-- HERO IMAGE -->
         <div class="heroImage">
-            <img class="heroImagePicture" src="./images/hero.jpg" alt="Hero image of Venom">
+            <img class="heroImagePicture" src="./images/hero.jpg" alt="Hero image of Venom" style="width: 100%;">
             <div class="textHeroImage">
-                <p style="color: #6d0e0e; font-size: larger; align-self: end; margin-right: 2em; font-weight: bold;">I'M VENOM</p>
-                <h2 style="font-size: 2em; width: 80%; text-align: center; margin: 0; font-weight: lighter;"><strong style="font-size: 1.5em;">AntiHeroe</strong> <br> & Simbionte</h2>
-                <p style="font-size: 1.5em; width: 100%; text-align: center; font-weight: lighter;">¡Mascara Ven a mi!</p>
+                <p>I'M VENOM</p>
+                <h2><strong>AntiHeroe</strong> & Simbionte</h2>
+                <p>¡Mascara Ven a mi!</p>
                 <button>ENTRAR</button>
             </div>
         </div>
         
     <!-- SOBRE MI -->
-        <div class="sobreMi">
-            <div class="sobreMiHeader">
-                <img class="logo" src="./images/logo.png" alt="Logo de venom">
-                <p>SOBRE MI</p>
+        <div class="middle">
+            <div class="sobreMi">
+                <div class="sobreMiHeader">
+                    <img class="logo" src="./images/logo.png" alt="Logo de venom">
+                    <p>SOBRE MI</p>
+                </div> 
             </div>
-            <div class="sobreMiContent">
+            <div class="sobreMiContent" style="margin-left: 1em;">
                 Eddie Brock como el nuevo anfitrión que se convertiría en el villano Venom, utilizando los acontecimientos de la historia de "Sin Eater"
             </div>
         </div>
         
     <!-- NOVEDADES -->
-        <div class="novedades">
-            NOVEDADES
-        </div>
-        <div class="parallax-container">
-            <div class="column">
-                <div class="group">
-                    <img src="./images/venom1.jpg" alt="first venom picture">
-                    <img src="./images/venom2.jpg" style="padding-left: 8px;" alt="second venom picture">
-                </div>
-                    
-                    <img src="./images/venom4.jpg" style="margin-top: 0;" alt="third venom picture">
+        <div class="NovedadesContenedor" style=" align-self: center">
+            <div class="novedades">
+                NOVEDADES
             </div>
-            <div class="column">
-                <img src="./images/venom3.jpg" alt="fourth venom picture" style="object-fit: cover; padding-left: 5px; padding-bottom: 15px; height: 100%;">
+            <div class="parallax-container">
+                <div class="column">
+                    <div class="group">
+                        <img class="hidden" src="./images/venom1.jpg" alt="first venom picture">
+                        <img class="hidden" src="./images/venom2.jpg" style="padding-left: 8px;" alt="second venom picture">
+                    </div>
+                        
+                        <img src="./images/venom4.jpg"  alt="third venom picture">
+                </div>
+                <div class="column">
+                    <img src="./images/venom3.jpg" alt="fourth venom picture" style="object-fit: cover; padding-left: 5px; padding-bottom: 15px; height: 100%;">
+                </div>
             </div>
         </div>
     </div>
@@ -77,7 +83,7 @@
     <!-- FOOTER -->
     <footer>
         <div>Venom</div>
-        <div>All Rights Reserved. Terms of Use and Privacy Policy</div>
+        <div class="hidden">All Rights Reserved. Terms of Use and Privacy Policy</div>
         <div>@yamil.ms</div>
     </footer>
 </body>
