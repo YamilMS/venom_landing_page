@@ -19,10 +19,17 @@ header{
     display: flex;
 }
 
+.show{
+    display: none;
+}
+
 nav{
+    position: fixed;
     display: flex;
     align-items: center;
     width: 100vw;
+    z-index: 100;
+    background: white;
 }
 
 nav>div{
@@ -176,6 +183,7 @@ button:active {
 
 .sobreMiContent{
     text-align: center;
+    margin-right: 1rem
 }
 
 .novedadesContenedor{
@@ -256,6 +264,101 @@ footer {
         flex-direction: column;
         width: 200px;
     }
+
+    .navDiv{
+        position: fixed;
+        margin-right: 2rem;
+        right: -15rem;
+        top: -10rem;
+    }
+
+    .checkbox {
+        position: relative;
+        display: flex;
+        justify-content: end;
+        left: 2rem;
+        height: 2rem;
+        width: 2rem;
+        z-index: 5;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    .hamburger-lines {
+        height: 26px;
+        width: 32px;
+        z-index: 2;
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .line {
+        display: flex;
+        height: 4px;
+        width: 100%;
+        border-radius: 10px;
+        background: #0e2431;
+      }
+      
+      .hamburger-lines .line1 {
+        transform-origin: 0% 0%;
+        transition: transform 0.4s ease-in-out;
+      }
+      
+      .hamburger-lines .line2 {
+        transition: transform 0.2s ease-in-out;
+      }
+      
+      .hamburger-lines .line3 {
+        transform-origin: 0% 100%;
+        transition: transform 0.4s ease-in-out;
+      }
+    
+      .menu-items {
+        background: rgba(228, 228, 228, 0.9);
+        box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
+        margin-top: 3rem;
+        height: 20rem;
+        width: 15rem;
+        top: 10rem;
+        right: 10rem;
+        transform: translate(500%);
+        display: flex;
+        align-content: center;
+        align-items: flex-start;
+        justify-content: space-around;
+        flex-direction: column;
+        position: relative;
+        transition: transform 0.5s ease-in-out;
+        text-align: center;
+        z-index: 20;
+        list-style-type: none;
+      }
+      
+      .menu-items .liHam {
+        text-align: center;
+        font-size: 1rem;
+        justify-content: center;
+      }
+      
+      
+    input[type="checkbox"]:checked ~ .menu-items {
+        transform: translateX(0);
+      }
+      
+    input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+        transform: rotate(45deg);
+      }
+      
+    input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+        transform: scaleY(0);
+      }
+      
+    input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+        transform: rotate(-45deg);
+      }
    
     .hidden{
         display: none;
